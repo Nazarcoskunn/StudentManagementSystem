@@ -1,0 +1,47 @@
+﻿@model StudentManagementSystem.Models.Student
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 style="color: black;">Student Details</h1>
+
+<hr />
+<div class="row">
+    <table class="table table-bordered table-hover table-responsive-lg" style="background-color: white;">
+        <tr>
+            <th class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <td class="col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </td>
+        </tr>
+
+        <tr>
+            <th class="col-sm-2">
+                @Html.DisplayNameFor(model => model.StudentId)
+            </th>
+            <td class="col-sm-10">
+                @Html.DisplayFor(model => model.StudentId)
+            </td>
+        </tr>
+
+
+        <tr>
+            <th class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Class)
+            </th>
+            <td class="col-sm-10">
+                @Html.DisplayFor(model => model.Class)
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="row p-3">
+    <div class="form-group">
+        <a class="btn btn-primary float-end" asp-action="Edit" asp-route-id="@Model?.Id">Update Studentt</a>
+        <a class="btn btn-warning float-start" asp-action="Index">Back to List</a>
+    </div>
+</div>
